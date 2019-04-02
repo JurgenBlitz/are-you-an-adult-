@@ -12,7 +12,7 @@
    * 3- Both of the above cases, BUT the days do not match.
    * 
    * Cases 2 and 3 mean it hasn't been exactly 18 years 
-   * (to avoid the year counter matching case 1, but the user's birthday has not arrived yet)
+   * (to avoid the year counter skipping case 1, but the user's birthday has not arrived yet)
    * 
    * NOTE: The console.logs are merely there to capture each case. 
    * We can include a series of actions for each block
