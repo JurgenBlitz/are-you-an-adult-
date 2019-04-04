@@ -1,10 +1,6 @@
   /**
    * The following function takes two dates: the current date, and the user's date of birth, 
    * to check whether the user is 18 years or older. 
-   * It is important to note that this method
-   * works for a date that was typed in a dd/mm/yyyy format 
-   * (it might not work otherwise and might need adjustments-
-   * I will try to get to that eventually to capture a mm/dd/yyyy format)
    * 
    * The 'not adult' case will trigger in three cases:
    * 1- The current year - user's birth year comparison is not 18 or greater.
@@ -23,6 +19,7 @@
   today = new Date();
   userBirthdate = new Date(birthDateString.replace(/(\d{2})[-/](\d{2})[-/](\d+)/, "$2/$1/$3"));
   // the above line changes the position of days and the months to match the native mm/dd/yyyy
+  // for a mm/dd/yyyy styled date, delete the replace() method and just use: new Date(birthDateString);
 
   var flawlessyearcheck = (today.getFullYear() - userBirthdate.getFullYear() >= 19);
   var basicyearcheck = (today.getFullYear() - userBirthdate.getFullYear() === 18);
